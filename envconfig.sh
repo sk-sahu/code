@@ -1,18 +1,12 @@
 # install dependencies
 echo Initializing environment config...
 
-# Create directories to store persistent data
-mkdir -p /workspace/conda
-mkdir -p /workspace/data
-
 # Create a new env called gitpod_conda
-conda create --prefix /workspace/conda/gitpod_conda python=3.6 &&
-echo "conda activate /workspace/conda/gitpod_conda" >> ~/.bashrc &&
-export PATH=/workspace/conda/gitpod_conda/bin:$PATH &&
+echo "conda activate" >> ~/.bashrc &&
 source ~/.bashrc
 export SHELL=/bin/bash
 
 # Install conda packages 
-conda install -y -c conda-forge r-base
+conda install -c conda-forge -c bioconda r-base=4.0.3 r-tidyverse nextflow=20.10.0 -y
 
 echo Done.
