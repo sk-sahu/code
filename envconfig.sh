@@ -1,5 +1,5 @@
 # install dependencies
-echo Initializing...
+echo Initializing environment config...
 
 # Create directories to store persistent data
 mkdir -p /workspace/conda
@@ -12,34 +12,7 @@ export PATH=/workspace/conda/gitpod_conda/bin:$PATH &&
 source ~/.bashrc
 export SHELL=/bin/bash
 
-# Install conda packages for to run jupyterlab
-conda install -y -c conda-forge jupyterlab
-conda install -y -c conda-forge beakerx
-conda install -y -c conda-forge xeus-cling
-conda install -y -c conda-forge xeus-python
+# Install conda packages 
+conda install -y -c conda-forge r-base
 
-# Some extra packages for your environments
-# conda install -y -c anaconda pyodbc
-# conda install -y -c conda-forge xeus-cling
-# conda install -y -c conda-forge xeus-python
-# conda install -y -c conda-forge python-graphviz
-# conda install -y -c conda-forge tensorflow
-# conda install -y -c conda-forge keras
-# conda install -y -c conda-forge xtl
-# conda install -y -c conda-forge openblas
-# conda install -y -c conda-forge gdal
-# conda install -y -c conda-forge util-linux
-# conda install -y -c conda-forge libtiff
-# conda install -y -c conda-forge libgdal
-# conda install -y -c pytorch pytorch
-# conda install -y -c conda-forge dask
-# conda install -y -c conda-forge dash
-# conda install -y -c conda-forge dash-table
-# conda install -y -c conda-forge rx
-# conda install -y -c conda-forge dash-core-components
-# conda install -y -c conda-forge cassandra-driver
-# conda install -y -c ranaroussi yfinance
-
-# Notes
-#To run jupyter lab : jupyter lab --ip=0.0.0.0 --allow-root
-echo Done...
+echo Done.
