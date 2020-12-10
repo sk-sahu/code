@@ -1,6 +1,8 @@
 # code
 
-Ready to use vscode env in Gitpod, with minimal set of tools/packages
+[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/sk-sahu/code)
+
+Ready to use Gitpod/VScode IDE + Prebuilt Dev Environment, with minimal set of tools/packages -
 
 - conda
   - R
