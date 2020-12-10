@@ -7,6 +7,6 @@ source ~/.bashrc
 export SHELL=/bin/bash
 
 # Install conda packages 
-conda install -c conda-forge -c bioconda r-base=4.0.3 r-tidyverse nextflow=20.10.0 -y
+conda env update -f env.yml
 
 echo Done.
