@@ -28,7 +28,7 @@ RUN chown -R gitpod:gitpod /opt/conda \
     && chmod -R 777 /home/gitpod/.conda
 
 COPY env.yml /
-RUN /opt/conda/bin/conda env update -f /env.yml
+RUN /opt/conda/bin/conda env update -n base -f /env.yml
 
 # Give back control
 USER root
