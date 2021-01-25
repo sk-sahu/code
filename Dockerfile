@@ -27,6 +27,11 @@ RUN chown -R gitpod:gitpod /opt/conda \
     && chown -R gitpod:gitpod /home/gitpod/.conda \
     && chmod -R 777 /home/gitpod/.conda
 
+RUN source ~/.bashrc \
+    && export SHELL=/bin/bash \
+    && /opt/conda/bin/conda env update -f env.yml
+
+
 
 # Give back control
 USER root
