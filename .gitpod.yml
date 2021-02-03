@@ -8,6 +8,3 @@ vscode:
   extensions:
     # for R Extension - https://www.gitpod.io/docs/languages/r/#r-extension
     - Ikuyadeu.r@1.2.1:z5vr1v1bfS++U/aHLSXQ6Q==
-
-theming:
-    - editor-theme: dark 
