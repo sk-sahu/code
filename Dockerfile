@@ -12,10 +12,6 @@ RUN apt-get update \
 
 RUN mkdir -p /workspace/data \
     && chown -R gitpod:gitpod /workspace/data
-
-# Install Nextflow
-RUN wget -qO- get.nextflow.io | bash \
-    && sudo mv nextflow /usr/local/bin/
   
 # Install conda
 RUN mkdir /home/gitpod/.conda
@@ -31,9 +27,14 @@ RUN chown -R gitpod:gitpod /opt/conda \
     && chown -R gitpod:gitpod /home/gitpod/.conda \
     && chmod -R 777 /home/gitpod/.conda
 
+# Install the conda env
 COPY env.yml /
 RUN /opt/conda/bin/conda env update -n base -f /env.yml
 
+# Install Nextflow
+RUN wget -qO- get.nextflow.io | bash \
+    && sudo mv nextflow /usr/local/bin/
+    
 # Give back control
 USER root
 
