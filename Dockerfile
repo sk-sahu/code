@@ -30,10 +30,6 @@ RUN chown -R gitpod:gitpod /opt/conda \
 # Install the conda env
 COPY env.yml /
 RUN /opt/conda/bin/conda env update -n base -f /env.yml
-
-# Install Nextflow
-RUN wget -qO- get.nextflow.io | bash \
-    && sudo mv nextflow /usr/local/bin/
     
 # Give back control
 USER root
