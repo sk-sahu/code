@@ -12,9 +12,13 @@ RUN apt-get update \
 
 RUN mkdir -p /workspace/data \
     && chown -R gitpod:gitpod /workspace/data
+
+# Install Nextflow
+RUN wget -qO- get.nextflow.io | bash \
+    && sudo mv nextflow /usr/local/bin/
   
-RUN mkdir /home/gitpod/.conda
 # Install conda
+RUN mkdir /home/gitpod/.conda
 RUN wget --quiet https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh -O ~/miniconda.sh && \
     /bin/bash ~/miniconda.sh -b -p /opt/conda && \
     rm ~/miniconda.sh && \
